@@ -1,5 +1,8 @@
+# working directory
+working_dir <- "../"
+
 # path to Seurat object
-Seurat_object <- "data/src.0_32SS.use.rds"
+Seurat_object <- paste0(working_dir, "data/src.0_32SS.use.rds")
 
 # number of downsamples for each cell type
 sample_count_per_group <- 100

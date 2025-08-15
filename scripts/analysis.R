@@ -13,7 +13,7 @@ for (i in 1:concensus_sample_time) {
     }
     seurat_sub[[i]] <- seurat[, sample_cell]
 }
-saveRDS(seurat_sub, file = "output/seurat_sub.rds")
+saveRDS(seurat_sub, file = paste0(working_dir, "/output/seurat_sub.rds"))
 
 # Filter TF list
 TF_use <- list()
@@ -72,7 +72,7 @@ cluster <- cluster_louvain(genegraph, resolution = louvain_resolution)
 cluster_merge <- cluster$membership
 # you can manually merge clusters if needed like cluster_merge[cluster_merge %in% c(1, 2, 3)] <- "c1"
 
-pdf("output/gene_graph.pdf")
+pdf(paste0(working_dir, "/output/gene_graph.pdf"))
 plot.igraph(genegraph,
               layout = layout,
               edge.color = "#EFEFEF88",
@@ -84,4 +84,4 @@ plot.igraph(genegraph,
               vertex.color = MyName2Col(cluster_merge))
 dev.off()
 
-save(genegraph, layout, cluster_merge, file = "output/gene_graph.RData")
+save(genegraph, layout, cluster_merge, file = paste0(working_dir, "/output/gene_graph.RData"))
