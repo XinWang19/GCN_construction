@@ -1,4 +1,4 @@
-# GCN Construction & Comparison
+# GCN Construction
 
 This script aims to construct gene coexpressed network (GCN) to identify coexpressed modules during in vivo and in vitro islet differentiation. Each coexpressed module corresponds to a unique regulatory programme driving one particular stage. Thereby, it enables to determine: 1) how many stable stages a developmental trajectory comprises, and 2) the extent of regulatory changes between two stable stages (quantified by connectivity between two modules). 
 
